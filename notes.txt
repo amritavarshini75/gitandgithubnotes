@@ -1,0 +1,127 @@
+git and GitHub
+
+Git is a vcs so u can see various versions of the files
+collaborate on code
+keeps u track of changes made
+
+GitHub
+
+it is a repository hosting service
+
+set up git in local
+
+download and install git
+
+open cmd
+type git
+
+you should get git related stuff
+
+now use this command to set up the user
+
+git config --global user.name "user_name"
+
+to add a file to git use this command
+git add file_name_to_be_added
+eg:
+git add test2.txt
+ 
+after adding the file to git using the git command that added file will go to something called staging area
+it is something similar to the waiting area
+
+git add is not only limited to adding of a file but it also updates the deletion and modification to the staging area. or brings in any changes in the files to the staging area.
+
+if you have deleted a file in the local and want to update that in the repository if in case the git does not allow you to add using the file name use
+git add . command
+
+git add . adds / stages all of the files in the current directory. 
+
+to save that particular file we need to do git commit.
+git commit command:
+git commit -m "commit_message"
+eg:
+git commit -m "i have added the file"
+
+the git commit saves the file only in local 
+to save the file in the repository the file needs to be pushed to the repository 
+
+git push command
+git push origin branch_name (use the branch name to which you want to push the code/files)
+
+add->commit->push
+after creation of a file to putting it in the repository this is the flow
+
+The git add command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit.
+
+The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository.
+
+git add . will take all the changes to staging area
+
+git remote command:
+this command is used to connect the remote repo to local
+git remote add origin https://github.com/amritavarshini75/githubemc2.git
+
+command to change a branch name:
+git branch -M Name_to_be_Changed
+
+The git branch command is used to manage branches in Git. 
+
+eg:
+git branch -a
+this command is used to list all the branches in the git
+
+git checkout command:
+
+git checkout is used to change the working branch in the local or IDE.
+
+syntax:
+git checkout branch_name
+
+git diff command:
+command to see diff between existing checked out branch and some other branch
+
+syntax:
+git diff branch_name
+
+
+git merge command:
+if u want to merge existing checkout branch with some other branch then use this command.
+
+sytax
+git merge branch_name
+
+What is the git log?
+The git log command displays committed snapshots. It lets you list the project history, filter it, and search for specific changes. While git status lets you inspect the working directory and the staging area, git log only operates on the committed history.
+
+git log gives the commit ids
+so if u want to go to a commit version in local use this command
+git reset --hard commit_id
+
+git command to create a new branch from the main/master branch
+git checkout -b branch_name
+
+using branches you can separate the development activities
+
+What is a branch in GitHub?
+
+Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. You always create a branch from an existing branch. Typically, you might create a new branch from the default branch of your repository.
+
+usually for branch merging purposes we use 3 git commands
+git merge, git rebase, git cherry-pick
+
+git cherry-pick:
+suppose you do not want to merge everything of an other branch to main/master branch then you can pick the commits which you want to merge to the main/master branch
+
+command:
+git cherry-pick commit_id
+
+we need git rebase or git merge because in a large scale application there might be so many commits like thousands of commits so we cannot keep cherry picking all those commits which is a waste of time so only we will opt for git rebase or git merge
+
+git merge will merge the master branch to the existing branch changes on top. so if u want to check the git log to track ur changes it creates a confusion
+
+git rebase will merge the master branch to the existing branch changes in the bottom. so if u want to check the git log to track ur changes it will be easy and understandable
+
+so if u want to track ur git commits in a linear fashion opt for git rebase
+
+
+
